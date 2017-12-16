@@ -11,6 +11,16 @@
 |
 */
 
-Route::get('/', function () {
+
+
+Route::get('categoria/{categoria}/{pagina?}', function($categoria, $pagina = 10){
+    return "Viendo categoría $categoria y página $pagina";
+});
+
+Route::get('/laravel', function () {
     return view('welcome');
 });
+
+Route::get('colaboradores/{nombre}', function($nombre){
+    return "Mostrando el colaborador $nombre";
+})->where(array('nombre' => '[a-zA-Z]+'));

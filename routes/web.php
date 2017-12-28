@@ -17,7 +17,7 @@ Route::get('categoria/{categoria}/{pagina?}', function($categoria, $pagina = 10)
     return "Viendo categoría $categoria y página $pagina";
 });
 
-Route::get('/laravel', function () {
+Route::get('/', function () {
     return view('welcome');
 });
 
